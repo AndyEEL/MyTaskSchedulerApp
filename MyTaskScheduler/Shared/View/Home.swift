@@ -9,14 +9,7 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) { ForEach(0..<20)
-                { items in
-                    PartTimeCell()
-                }
-            }
-        }
-        
+        PartTimeCell()
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		860F272326E4B49900B24329 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272226E4B49900B24329 /* Home.swift */; };
 		860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272426E4BCB300B24329 /* PartTimeCell.swift */; };
+		86129BF026E5FD5500480E4B /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86129BEF26E5FD5500480E4B /* TimeCell.swift */; };
 		86AF25C226E4B32900A2EFF6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C126E4B32900A2EFF6 /* Tests_iOS.swift */; };
 		86AF25C426E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C326E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift */; };
 		86AF25CE26E4B32900A2EFF6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25CD26E4B32900A2EFF6 /* Tests_macOS.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		860F272226E4B49900B24329 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		860F272426E4BCB300B24329 /* PartTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeCell.swift; sourceTree = "<group>"; };
+		86129BEF26E5FD5500480E4B /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		86AF25AB26E4B32800A2EFF6 /* MyTaskSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskSchedulerApp.swift; sourceTree = "<group>"; };
 		86AF25AC26E4B32800A2EFF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86AF25AD26E4B32900A2EFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				860F272226E4B49900B24329 /* Home.swift */,
 				860F272426E4BCB300B24329 /* PartTimeCell.swift */,
+				86129BEF26E5FD5500480E4B /* TimeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				86AF25D326E4B32900A2EFF6 /* ContentView.swift in Sources */,
 				860F272326E4B49900B24329 /* Home.swift in Sources */,
 				86AF25D126E4B32900A2EFF6 /* MyTaskSchedulerApp.swift in Sources */,
+				86129BF026E5FD5500480E4B /* TimeCell.swift in Sources */,
 				860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

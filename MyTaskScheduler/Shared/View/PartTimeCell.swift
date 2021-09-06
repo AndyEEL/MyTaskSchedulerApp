@@ -9,55 +9,28 @@ import SwiftUI
 
 struct PartTimeCell: View {
     var body: some View {
-        VStack{
-            HStack {
-                Text("September 5th")
+        GeometryReader{ proxy in
+            ZStack{
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.blue, lineWidth: 4)
+                
+                
+                Text("6일(월)")
                     .font(.title)
-                    .fontWeight(.bold)
-                VStack {
-                    ProgressView(value: 0.66)
-                    Text("66%")
-                }
-                Button(action: {
-                    print("Edit button was tapped")
-                }) {
-                    Image(systemName: "slider.horizontal.3")
-                }
-            }
-            
-            
-            HStack{
-                VStack{
-                    Text("오전")
-                    Text("아침밥 먹기")
-                }
-                VStack{
-                    Text("오후")
-                    Circle()
-                }
-                VStack{
-                    Text("저녁")
-                    Circle()
-                }
-                VStack{
-                    Text("밤")
-                    Circle()
-                }
-                VStack{
-                    Text("새벽")
-                    Circle()
-                }
+                    .frame(width: proxy.size.width / 3.4)
+                    .background(Color.white)
+                    .offset(x: (-proxy.frame(in: .local).maxX + proxy.size.width / 3) / 2.5,
+                            y: -proxy.frame(in: .local).height/2)
             }
         }
         .frame(height: 200)
-        .background(Color.green)
-        .cornerRadius(10)
         .padding()
+        
     }
 }
 
 struct PartTimeCell_Previews: PreviewProvider {
     static var previews: some View {
-        PartTimeCell()
+        ContentView()
     }
 }
