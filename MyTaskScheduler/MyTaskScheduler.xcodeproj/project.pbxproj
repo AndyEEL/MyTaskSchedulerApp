@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		860F272326E4B49900B24329 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272226E4B49900B24329 /* Home.swift */; };
 		860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272426E4BCB300B24329 /* PartTimeCell.swift */; };
-		86129BF026E5FD5500480E4B /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86129BEF26E5FD5500480E4B /* TimeCell.swift */; };
+		8624DF1A26E6FDC90028DC6F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624DF1926E6FDC90028DC6F /* CustomTabView.swift */; };
 		86AF25C226E4B32900A2EFF6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C126E4B32900A2EFF6 /* Tests_iOS.swift */; };
 		86AF25C426E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C326E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift */; };
 		86AF25CE26E4B32900A2EFF6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25CD26E4B32900A2EFF6 /* Tests_macOS.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		860F272226E4B49900B24329 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		860F272426E4BCB300B24329 /* PartTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeCell.swift; sourceTree = "<group>"; };
-		86129BEF26E5FD5500480E4B /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		8624DF1926E6FDC90028DC6F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		86AF25AB26E4B32800A2EFF6 /* MyTaskSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskSchedulerApp.swift; sourceTree = "<group>"; };
 		86AF25AC26E4B32800A2EFF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86AF25AD26E4B32900A2EFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		860F272126E4B48C00B24329 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8624DF1926E6FDC90028DC6F /* CustomTabView.swift */,
 				860F272226E4B49900B24329 /* Home.swift */,
 				860F272426E4BCB300B24329 /* PartTimeCell.swift */,
-				86129BEF26E5FD5500480E4B /* TimeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,8 +308,8 @@
 			files = (
 				86AF25D326E4B32900A2EFF6 /* ContentView.swift in Sources */,
 				860F272326E4B49900B24329 /* Home.swift in Sources */,
+				8624DF1A26E6FDC90028DC6F /* CustomTabView.swift in Sources */,
 				86AF25D126E4B32900A2EFF6 /* MyTaskSchedulerApp.swift in Sources */,
-				86129BF026E5FD5500480E4B /* TimeCell.swift in Sources */,
 				860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -461,6 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

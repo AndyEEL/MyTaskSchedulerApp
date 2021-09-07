@@ -9,9 +9,28 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        PartTimeCell()
+        NavigationView {
+            
+            ScrollView {
+                ForEach(0..<4){ index in
+                    NavigationLink {
+                        Text("hello")
+                    } label: {
+                        PartTimeCell()
+                    }
+                    
+                }
+                Spacer()
+                
+            }
+            
+            
+            .navigationTitle("Task Scheduler")
+        }
     }
 }
+
+
 
 
 struct Home_Previews: PreviewProvider {
