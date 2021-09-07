@@ -8,25 +8,43 @@
 import SwiftUI
 
 struct Home: View {
+    
+    init(){
+        // if navBar is with large title
+//        UINavigationBar.appearance().backgroundColor = .blue
+    }
+    
     var body: some View {
+        
         NavigationView {
             
             ScrollView {
-                ForEach(0..<4){ index in
-                    NavigationLink {
-                        Text("hello")
-                    } label: {
-                        PartTimeCell()
+                VStack{
+                    DayCell()
+                    
+                    ForEach(0..<20){ index in
+                        
+                        NavigationLink {
+                            
+                        } label: {
+                            PartTimeCell()
+                        }
+                        
                     }
+                    Spacer()
                     
                 }
-                Spacer()
+//                .background(Color.black.ignoresSafeArea(.all))
                 
             }
             
-            
+            .refreshable {
+                // add a new task
+            }
             .navigationTitle("Task Scheduler")
+            
         }
+        
     }
 }
 

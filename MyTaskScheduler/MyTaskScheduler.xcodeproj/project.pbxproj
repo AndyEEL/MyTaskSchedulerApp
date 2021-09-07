@@ -10,6 +10,9 @@
 		860F272326E4B49900B24329 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272226E4B49900B24329 /* Home.swift */; };
 		860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F272426E4BCB300B24329 /* PartTimeCell.swift */; };
 		8624DF1A26E6FDC90028DC6F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624DF1926E6FDC90028DC6F /* CustomTabView.swift */; };
+		867AF59626E7744E00E917EF /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867AF59526E7744E00E917EF /* DayCell.swift */; };
+		867AF59926E7756E00E917EF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867AF59826E7756E00E917EF /* SwiftUIView.swift */; };
+		867AF59A26E7756E00E917EF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867AF59826E7756E00E917EF /* SwiftUIView.swift */; };
 		86AF25C226E4B32900A2EFF6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C126E4B32900A2EFF6 /* Tests_iOS.swift */; };
 		86AF25C426E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25C326E4B32900A2EFF6 /* Tests_iOSLaunchTests.swift */; };
 		86AF25CE26E4B32900A2EFF6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF25CD26E4B32900A2EFF6 /* Tests_macOS.swift */; };
@@ -43,6 +46,8 @@
 		860F272226E4B49900B24329 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		860F272426E4BCB300B24329 /* PartTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeCell.swift; sourceTree = "<group>"; };
 		8624DF1926E6FDC90028DC6F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		867AF59526E7744E00E917EF /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		867AF59826E7756E00E917EF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		86AF25AB26E4B32800A2EFF6 /* MyTaskSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskSchedulerApp.swift; sourceTree = "<group>"; };
 		86AF25AC26E4B32800A2EFF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86AF25AD26E4B32900A2EFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 				8624DF1926E6FDC90028DC6F /* CustomTabView.swift */,
 				860F272226E4B49900B24329 /* Home.swift */,
 				860F272426E4BCB300B24329 /* PartTimeCell.swift */,
+				867AF59526E7744E00E917EF /* DayCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 			children = (
 				86AF25AB26E4B32800A2EFF6 /* MyTaskSchedulerApp.swift */,
 				86AF25AC26E4B32800A2EFF6 /* ContentView.swift */,
+				867AF59826E7756E00E917EF /* SwiftUIView.swift */,
 				860F272126E4B48C00B24329 /* View */,
 				86AF25AD26E4B32900A2EFF6 /* Assets.xcassets */,
 			);
@@ -307,9 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				86AF25D326E4B32900A2EFF6 /* ContentView.swift in Sources */,
+				867AF59926E7756E00E917EF /* SwiftUIView.swift in Sources */,
 				860F272326E4B49900B24329 /* Home.swift in Sources */,
 				8624DF1A26E6FDC90028DC6F /* CustomTabView.swift in Sources */,
 				86AF25D126E4B32900A2EFF6 /* MyTaskSchedulerApp.swift in Sources */,
+				867AF59626E7744E00E917EF /* DayCell.swift in Sources */,
 				860F272526E4BCB300B24329 /* PartTimeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +329,7 @@
 			files = (
 				86AF25D426E4B32900A2EFF6 /* ContentView.swift in Sources */,
 				86AF25D226E4B32900A2EFF6 /* MyTaskSchedulerApp.swift in Sources */,
+				867AF59A26E7756E00E917EF /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

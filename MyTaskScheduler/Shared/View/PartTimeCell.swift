@@ -9,41 +9,40 @@ import SwiftUI
 
 struct PartTimeCell: View {
     var body: some View {
-        HStack{
-            VStack(alignment:.leading){
-                Text("오전 10시")
-                Text("근영이와 약속")
-            }
-            Spacer()
-            VStack{
+        VStack(alignment: .leading, spacing: 8){
+            HStack{
+                Text("Car Rent App Coding")
+                    .font(.title2.bold())
+                    
+                Spacer()
+                
                 Button {
-                    print("pressed btn")
+                    
                 } label: {
-                    Image(systemName: "checkmark")
-                        .font(.title2)
+                    Image(systemName: "ellipsis")
                 }
-                Button {
-                    print("pressed btn")
-                } label: {
-                    Image(systemName: "checkmark")
-                        .font(.title2)
-                }
-
             }
+            Text("Deadline: 28th April")
+                .font(.caption)
+                
+            ProgressView("Progress", value: 0.5)
+            
+            Text("Complete the story for Agile value. 3 Things are working. that are translating, coding and refactoring")
+                .font(.caption)
+                .multilineTextAlignment(.leading)
+            
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 20)
+        .background {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.ultraThinMaterial)
         }
         .padding(.horizontal, 10)
-        .padding(.vertical, 5)
-        .background{
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.blue.opacity(0.7))
-        }
-        .padding(.horizontal,5)
-        .padding(.vertical,2.4)
-        
-        
-        
+        .padding(.vertical, 4)
     }
 }
+
 
 
 struct PartTimeCell_Previews: PreviewProvider {

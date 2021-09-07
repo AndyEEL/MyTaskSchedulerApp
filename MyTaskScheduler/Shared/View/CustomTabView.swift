@@ -12,8 +12,8 @@ struct CustomTabView: View {
     @State var isHomeView : Bool = true
     
     init(){
-//        UITabBar.appearance().isHidden = false
-//        >> What does this mean?
+        UITabBar.appearance().isHidden = true
+
         
     }
     
