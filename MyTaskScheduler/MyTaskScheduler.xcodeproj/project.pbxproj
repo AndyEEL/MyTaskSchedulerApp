@@ -107,6 +107,7 @@
 		86AF25A526E4B32700A2EFF6 = {
 			isa = PBXGroup;
 			children = (
+				867AF59826E7756E00E917EF /* SwiftUIView.swift */,
 				86AF25AA26E4B32800A2EFF6 /* Shared */,
 				86AF25C026E4B32900A2EFF6 /* Tests iOS */,
 				86AF25CC26E4B32900A2EFF6 /* Tests macOS */,
@@ -119,7 +120,6 @@
 			children = (
 				86AF25AB26E4B32800A2EFF6 /* MyTaskSchedulerApp.swift */,
 				86AF25AC26E4B32800A2EFF6 /* ContentView.swift */,
-				867AF59826E7756E00E917EF /* SwiftUIView.swift */,
 				860F272126E4B48C00B24329 /* View */,
 				86AF25AD26E4B32900A2EFF6 /* Assets.xcassets */,
 			);

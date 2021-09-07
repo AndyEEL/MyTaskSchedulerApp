@@ -9,13 +9,17 @@ import SwiftUI
 
 struct DayCell: View {
     var body: some View {
-        HStack{
-            Text("Morning")
-                .font(.title.bold())
-            Spacer()
+        VStack{
+            Divider()
+            HStack{
+                Text("Setember 7th")
+                    .font(.title.bold())
+                Spacer()
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal,18)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal,18)
+        
     }
 }
 

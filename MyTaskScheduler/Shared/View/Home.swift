@@ -11,7 +11,7 @@ struct Home: View {
     
     init(){
         // if navBar is with large title
-//        UINavigationBar.appearance().backgroundColor = .blue
+        //        UINavigationBar.appearance().backgroundColor = .blue
     }
     
     var body: some View {
@@ -34,7 +34,7 @@ struct Home: View {
                     Spacer()
                     
                 }
-//                .background(Color.black.ignoresSafeArea(.all))
+                //                .background(Color.black.ignoresSafeArea(.all))
                 
             }
             
@@ -42,9 +42,16 @@ struct Home: View {
                 // add a new task
             }
             .navigationTitle("Task Scheduler")
-            
+            .toolbar {
+                Button {
+                    print("pressed btn")
+                } label: {
+                    Image(systemName: "plus")
+                }
+
+            }
         }
-        
+
     }
 }
 

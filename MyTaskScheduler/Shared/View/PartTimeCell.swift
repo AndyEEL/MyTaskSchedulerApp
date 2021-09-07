@@ -15,14 +15,9 @@ struct PartTimeCell: View {
                     .font(.title2.bold())
                     
                 Spacer()
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "ellipsis")
-                }
+
             }
-            Text("Deadline: 28th April")
+            Text("Morning: 9:00 ~ 12:00" )
                 .font(.caption)
                 
             ProgressView("Progress", value: 0.5)
