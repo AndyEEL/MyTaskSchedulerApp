@@ -13,18 +13,23 @@ struct PartTimeCell: View {
             HStack{
                 Text("Car Rent App Coding")
                     .font(.title2.bold())
+                    .foregroundColor(.black)
+                    
                     
                 Spacer()
 
             }
             Text("Morning: 9:00 ~ 12:00" )
                 .font(.caption)
+                .foregroundColor(.black)
                 
             ProgressView("Progress", value: 0.5)
+                .foregroundColor(.black)
             
             Text("Complete the story for Agile value. 3 Things are working. that are translating, coding and refactoring")
                 .font(.caption)
                 .multilineTextAlignment(.leading)
+                .foregroundColor(.black)
             
         }
         .padding(.vertical, 10)
