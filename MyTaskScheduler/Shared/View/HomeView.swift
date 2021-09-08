@@ -7,14 +7,10 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeView: View {
     
-    @ObservedObject var taskdata: dummytasks = dummytasks()
+    @ObservedObject var taskdata: Tasks
     
-    init(){
-        // if navBar is with large title
-        //        UINavigationBar.appearance().backgroundColor = .blue
-    }
     
     var body: some View {
         
@@ -22,24 +18,27 @@ struct Home: View {
             
             ScrollView {
                 VStack{
-                    DayCell()
                     
-                    ForEach(0..<taskdata.dummy.count){ index in
+                    Divider()
+                    
+                    HStack{
+                        Text("Setember 7th")
+                            .font(.title.bold())
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal,18)
+                    
+                    ForEach(0..<taskdata.dummyTasks.count){ index in
                         
                         NavigationLink {
                             
                         } label: {
-                            PartTimeCell(indexData: $taskdata.dummy[index])
+                            TaskCardView(indexData: $taskdata.dummyTasks[index])
                         }
-                        
                     }
-                    Spacer()
-                    
                 }
-                //                .background(Color.black.ignoresSafeArea(.all))
-                
             }
-            
             .refreshable {
                 // add a new task
             }
@@ -49,11 +48,9 @@ struct Home: View {
                     print("pressed btn")
                 } label: {
                     Image(systemName: "plus")
-                }
-
+                }                
             }
         }
-
     }
 }
 

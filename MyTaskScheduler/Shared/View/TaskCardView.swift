@@ -1,25 +1,18 @@
 //
-//  PartTimeCell.swift
-//  PartTimeCell
+//  TaskCard.swift
+//  TaskCardView
 //
 //  Created by 이동건 on 2021/09/05.
 //
 
 import SwiftUI
 
-struct PartTimeCell: View {
+struct TaskCardView: View {
     
-    @Binding var indexData: TaskData
+    // MARK: Properties
+    @Binding var indexData: TaskModel
     
-    func translateDatetoString(date: Date) -> String {
-        let dateFormateer = DateFormatter()
-        dateFormateer.timeStyle = .short
-        dateFormateer.dateStyle = .short
-        dateFormateer.locale = Locale(identifier: "en_US")
-        
-        return dateFormateer.string(from: date)
-    }
-    
+    // MARK: Body
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
             HStack{
@@ -30,7 +23,7 @@ struct PartTimeCell: View {
                 Spacer()
 
             }
-            Text(translateDatetoString(date: indexData.date))
+            Text(translateToString(from: indexData.date))
                 .font(.caption)
                 .foregroundColor(.black)
                 
@@ -51,6 +44,15 @@ struct PartTimeCell: View {
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 4)
+    }
+    
+    // MARK: Helper
+    func translateToString(from date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "en_US")
+        return dateFormatter.string(from: date)
     }
 }
 

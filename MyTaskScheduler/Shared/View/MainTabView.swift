@@ -1,40 +1,38 @@
 //
-//  CustomTabView.swift
-//  CustomTabView
+//  MainTabView.swift
+//  MainTabView
 //
 //  Created by 이동건 on 2021/09/07.
 //
 
 import SwiftUI
 
-struct CustomTabView: View {
+struct MainTabView: View {
     
-    //option
-    @StateObject var taskdata: dummytasks = dummytasks()
+    @ObservedObject var taskdata: Tasks
     
-    @State var isHomeView : Bool = true
+    @State private var isSelectedHomeView : Bool = true
     
-    init(){
+    // Default Tabbar be invisible...
+    init(taskdata: Tasks){
+        self.taskdata = taskdata
         UITabBar.appearance().isHidden = true
-
-        
     }
     
     var body: some View {
         
-        TabView(selection: $isHomeView) {
-            if isHomeView {
-                Home()
-                    .environmentObject(taskdata)
+        TabView(selection: $isSelectedHomeView) {
+            if isSelectedHomeView {
+                HomeView(taskdata: taskdata)
             }
             else {
-                Text("Dashboard View")
+                DashboardView()
             }
         }
         .overlay(alignment: .bottom) {
             HStack(spacing: 124){
                 Button {
-                    isHomeView = true
+                    isSelectedHomeView = true
                 } label: {
                     VStack{
                         Image(systemName: "house")
@@ -43,10 +41,10 @@ struct CustomTabView: View {
                             .font(.caption)
                     }
                 }
-                .foregroundColor(isHomeView == true ? .blue : .gray)
+                .foregroundColor(isSelectedHomeView == true ? .blue : .gray)
                 
                 Button {
-                    isHomeView = false
+                    isSelectedHomeView = false
                 } label: {
                     VStack{
                         Image(systemName: "chart.bar.xaxis")
@@ -54,9 +52,8 @@ struct CustomTabView: View {
                         Text("Dashboard")
                             .font(.caption)
                     }
-                    
                 }
-                .foregroundColor(isHomeView != true ? .blue : .gray)
+                .foregroundColor(isSelectedHomeView != true ? .blue : .gray)
             }
             .frame(maxWidth:.infinity)
             .padding(.vertical,4)
@@ -65,9 +62,6 @@ struct CustomTabView: View {
             .padding(.horizontal,20)
             .shadow(color: .black.opacity(0.05), radius: 5, x: 5, y: 5)
             .shadow(color: .black.opacity(0.05), radius: 5, x: -5, y: 5)
-            
-            
-            
         }
     }
 }
