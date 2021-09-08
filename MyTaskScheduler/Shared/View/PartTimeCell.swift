@@ -8,25 +8,36 @@
 import SwiftUI
 
 struct PartTimeCell: View {
+    
+    @Binding var indexData: TaskData
+    
+    func translateDatetoString(date: Date) -> String {
+        let dateFormateer = DateFormatter()
+        dateFormateer.timeStyle = .short
+        dateFormateer.dateStyle = .short
+        dateFormateer.locale = Locale(identifier: "en_US")
+        
+        return dateFormateer.string(from: date)
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
             HStack{
-                Text("Car Rent App Coding")
+                Text(indexData.title)
                     .font(.title2.bold())
                     .foregroundColor(.black)
-                    
                     
                 Spacer()
 
             }
-            Text("Morning: 9:00 ~ 12:00" )
+            Text(translateDatetoString(date: indexData.date))
                 .font(.caption)
                 .foregroundColor(.black)
                 
-            ProgressView("Progress", value: 0.5)
+            ProgressView("Progress", value: indexData.progress)
                 .foregroundColor(.black)
             
-            Text("Complete the story for Agile value. 3 Things are working. that are translating, coding and refactoring")
+            Text(indexData.content)
                 .font(.caption)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.black)

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Home: View {
     
+    @ObservedObject var taskdata: dummytasks = dummytasks()
+    
     init(){
         // if navBar is with large title
         //        UINavigationBar.appearance().backgroundColor = .blue
@@ -22,12 +24,12 @@ struct Home: View {
                 VStack{
                     DayCell()
                     
-                    ForEach(0..<20){ index in
+                    ForEach(0..<taskdata.dummy.count){ index in
                         
                         NavigationLink {
                             
                         } label: {
-                            PartTimeCell()
+                            PartTimeCell(indexData: $taskdata.dummy[index])
                         }
                         
                     }

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CustomTabView: View {
     
+    //option
+    @StateObject var taskdata: dummytasks = dummytasks()
+    
     @State var isHomeView : Bool = true
     
     init(){
@@ -22,6 +25,7 @@ struct CustomTabView: View {
         TabView(selection: $isHomeView) {
             if isHomeView {
                 Home()
+                    .environmentObject(taskdata)
             }
             else {
                 Text("Dashboard View")
