@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var taskdata: Tasks
+    @ObservedObject var taskdata: TaskViewModel
     
     
     var body: some View {

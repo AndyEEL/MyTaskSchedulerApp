@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @ObservedObject var taskdata: Tasks
+    @ObservedObject var taskdata: TaskViewModel
     
     @State private var isSelectedHomeView : Bool = true
     
-    // Default Tabbar be invisible...
-    init(taskdata: Tasks){
+    
+    init(taskdata: TaskViewModel){
         self.taskdata = taskdata
+        // Default Tabbar be invisible...
         UITabBar.appearance().isHidden = true
     }
     
