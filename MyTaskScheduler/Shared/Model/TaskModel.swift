@@ -14,7 +14,7 @@ struct TaskModel: Identifiable {
     let date: Date
     let title: String
     let content: String
-    let progress: Double
+    var progress: Double
     
 }
 

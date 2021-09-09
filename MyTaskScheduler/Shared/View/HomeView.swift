@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    // MARK: Properties
     @ObservedObject var taskdata: TaskViewModel
     
-    
+    // MARK: Body
     var body: some View {
         
         NavigationView {
@@ -52,6 +52,12 @@ struct HomeView: View {
             }
         }
     }
+    
+    
+    // MARK: Helpers
+    
+    
+    
 }
 
 

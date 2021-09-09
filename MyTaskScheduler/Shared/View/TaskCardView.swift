@@ -9,15 +9,14 @@ import SwiftUI
 
 struct TaskCardView: View {
     
-    // MARK: Properties
+    // MARK: - Properties
     @Binding var indexData: TaskModel
     
     private var TimeColor: Color {
         TimeConverterToColor(by: indexData.date)
-        
     }
     
-    // MARK: Body
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
             HStack{
@@ -54,7 +53,7 @@ struct TaskCardView: View {
         }
     }
     
-    // MARK: Helper
+    // MARK: - Helper
     
     // Translate Date to String
     func translateToString(from date: Date) -> String {
@@ -95,7 +94,6 @@ struct TaskCardView: View {
         default:
             print("otherTimes")
             return Color.gray
-            
         }
     }
 }
