@@ -29,12 +29,12 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal,18)
                     
-                    ForEach(0..<taskdata.dummyTasks.count){ index in
+                    ForEach(0..<taskdata.Tasks.count){ index in
                         
                         NavigationLink {
                             
                         } label: {
-                            TaskCardView(indexData: $taskdata.dummyTasks[index])
+                            TaskCardView(indexData: $taskdata.Tasks[index])
                         }
                     }
                 }

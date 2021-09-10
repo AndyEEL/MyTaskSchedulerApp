@@ -5,7 +5,7 @@
 //  Created by 이동건 on 2021/09/07.
 //
 
-import SwiftUI
+import Foundation
 
 // Model
 struct TaskModel: Identifiable {
@@ -21,11 +21,34 @@ struct TaskModel: Identifiable {
 // Dummy View Model
 class TaskViewModel: ObservableObject {
     
-    @Published var dummyTasks: [TaskModel] = [
-        TaskModel(date: Date(timeIntervalSince1970: 410235000), title: "Ideation for a new mobile service", content: "Team BrainStorming and BrainWriting.", progress: 0.2),
-        TaskModel(date: Date(timeIntervalSince1970: 410245000), title: "Naming the our new mobile service", content: "Adapting our value with a new name.", progress: 0.4),
-        TaskModel(date: Date(timeIntervalSince1970: 410260000), title: "Planning more detail ", content: "Integrating User-Experience with our value/service", progress: 0.6),
-        TaskModel(date: Date(timeIntervalSince1970: 410275000), title: "Designing UI", content: "Considering UIUX and benchmarking reference designs", progress: 0.8),
-        TaskModel(date: Date(timeIntervalSince1970: 410290000), title: "Developing with Agile methology", content: "Repeating Story-Analysis cycles", progress: 1)
-    ]
+    //MARK: -Dummy Data
+    
+    
+    @Published var Tasks: [TaskModel]
+    
+    init(from TaskModels: [TaskModel] = dummy) {
+        
+        self.Tasks = TaskModels
+    }
+    
+    
+    //MARK: -Helpers
+    
+    // 테스크 모델 받으면, 년 월 일 시간 파악하는 함수
+    func estimateDateComponents(from date: Date) -> DateComponents{
+        let myCalendar = Calendar(identifier: .gregorian)
+        return myCalendar.dateComponents([.year,.hour,.day], from: date)
+    }
+    
+    // 년 월 일 바탕으로 그룹으로 만들어서 셀에게 줄 딕셔너리_데이터 만들기
+    func arrangeCell(from dateComponents: DateComponents) {
+        let dictionary: [DateComponents: [TaskModel]] 
+        
+    }
+    
+    
 }
+
+
+
+
