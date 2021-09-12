@@ -35,13 +35,12 @@ struct HomeView: View {
                             
                         } label: {
                             TaskCardView(indexData: $taskdata.Tasks[index])
+                            
                         }
                     }
                 }
             }
-            .refreshable {
-                // add a new task
-            }
+            
             .navigationTitle("Task Scheduler")
             .toolbar {
                 Button {
@@ -51,6 +50,7 @@ struct HomeView: View {
                 }                
             }
         }
+        .navigationViewStyle(.stack)
     }
     
     

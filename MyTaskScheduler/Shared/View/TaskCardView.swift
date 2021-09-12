@@ -74,25 +74,25 @@ struct TaskCardView: View {
         // by enum_Timezone, Build a View
         switch Components.hour{
         case 7,8,9,10:
-            print("Morning")
+//            print("Morning")
             return Color.blue
         case 11,12:
-            print("Lunch")
+//            print("Lunch")
             return Color.purple
         case 13,14,15,16:
-            print("Afternoon")
+//            print("Afternoon")
             return Color.pink
         case 17,18:
-            print("Dinner")
+//            print("Dinner")
             return Color.orange
         case 19,20,21,22:
-            print("Evening")
+//            print("Evening")
             return Color.green
         case 23,0,1,2:
-            print("Night")
+//            print("Night")
             return Color.cyan
         default:
-            print("otherTimes")
+//            print("otherTimes")
             return Color.gray
         }
     }
